@@ -78,6 +78,11 @@ if (appArgs.basicAuthPassword) {
   );
 }
 
+app.commandLine.appendSwitch(
+  'autoplay-policy',
+  'no-user-gesture-required'
+);
+
 const isRunningMacos = isOSX();
 let currentBadgeCount = 0;
 const setDockBadge = isRunningMacos
